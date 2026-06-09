@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lu Modas – Moda Feminina</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="shortcut icon" href="midias/lumodas3.ico" type="image/x-icon">
+</head>
+<body>
+
+  <header id="header">
+    <div class="header-inner">
+      <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+      <a href="#inicio" class="logo">
+        <img src="midias/logo_lumodas.png" alt="logo lu modas" class="logo-img"/>
+      </a>
+      <nav id="nav">
+        <ul>
+          <li><a href="#inicio" class="nav-link active">Início</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre nós</a></li>
+          <li><a href="#produtos" class="nav-link">Produtos</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="cart-btn" id="cartBtn">
+          <i class="fas fa-bag-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <a href="https://wa.me/5511913737261" target="_blank" class="btn-whatsapp-header">
+          <i class="fab fa-whatsapp"></i> Fale Conosco
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg">
+      <img src="midias/prateleiras.png" alt="Hero"/>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Bem-vinda à</p>
+      <h1 class="hero-title">LU MODAS</h1>
+      <p class="hero-quote">"Deus é quem dá o crescimento"</p>
+      <p class="hero-sub">Elegância, conforto e qualidade em cada detalhe.</p>
+      <div class="hero-actions">
+        <a href="#produtos" class="btn-primary">Ver Coleção</a>
+        <a href="https://wa.me/5511913737261" target="_blank" class="btn-wpp">
+          <i class="fab fa-whatsapp"></i> Fale Conosco
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-shirt"></i></div>
+          <h3>Moda Feminina</h3>
+          <p>Peças selecionadas para você</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-tag"></i></div>
+          <h3>Preços Justos</h3>
+          <p>Qualidade e estilo que cabem no seu bolso</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-gift"></i></div>
+          <h3>Promoções</h3>
+          <p>Ofertas especiais toda semana</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fab fa-whatsapp"></i></div>
+          <h3>Atendimento</h3>
+          <p>Fale conosco pelo WhatsApp</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="about" id="sobre">
+    <div class="container about-inner">
+      <div class="about-img">
+        <img src="midias/manequim.png" alt="Loja"/>
+      </div>
+      <div class="about-text">
+        <span class="section-eyebrow">Quem somos</span>
+        <h2 class="section-title">Nossa <em>história</em></h2>
+        <p>A Lu Modas nasceu da paixão por moda e do desejo de levar estilo acessível para todo mundo.</p>
+        <p>Nossa missão é fazer cada cliente se sentir especial e confiante. Acreditamos que a moda é para todos!</p>
+        <a href="#contato" class="btn-primary">Fale Conosco</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS -->
+  <section class="products-section" id="produtos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Catálogo</span>
+        <h2 class="section-title">Produtos em <em>Destaque</em></h2>
+      </div>
+
+      <!-- BUSCA -->
+      <div class="search-wrap">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="searchInput" class="search-input" placeholder="Buscar produto..."/>
+        <button class="search-clear" id="searchClear"><i class="fas fa-xmark"></i></button>
+      </div>
+
+      <!-- FILTROS -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="promo">🔥 Promoções</button>
+        <button class="filter-btn" data-filter="vestidos">Vestidos</button>
+        <button class="filter-btn" data-filter="conjuntos">Conjuntos</button>
+        <button class="filter-btn" data-filter="blusas">Blusas</button>
+        <button class="filter-btn" data-filter="macaquinhos">Macaquinhos</button>
+      </div>
+
+      <div class="products-grid" id="productsGrid"></div>
+      <p class="no-results" id="noResults" style="display:none">Nenhum produto encontrado.</p>
+    </div>
+  </section>
+
+  <!-- SOCIAL BANNER -->
+  <div class="social-banner">
+    <div class="social-banner-inner">
+      <div class="social-banner-text">
+        <i class="fas fa-percent"></i>
+        <div>
+          <strong>Fique por dentro das novidades!</strong>
+          <span>Siga nossas redes sociais e aproveite nossas promoções exclusivas.</span>
+        </div>
+      </div>
+      <div class="social-links">
+        <a href="https://www.instagram.com/lumoddas_/" target="_blank" class="social-link"><i class="fab fa-instagram"></i> @lumoddas_</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTATO -->
+  <section class="contact-section" id="contato">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Contato</span>
+        <h2 class="section-title">Fale com a <em>gente</em></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-card-icon"><i class="fab fa-whatsapp"></i></div>
+          <h3>WhatsApp</h3>
+          <p>(11) 91373-7261</p>
+          <a href="https://wa.me/5511913737261" target="_blank" class="btn-primary">Chamar agora</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon"><i class="fab fa-instagram"></i></div>
+          <h3>Instagram</h3>
+          <p>@lumoddas_</p>
+          <a href="https://www.instagram.com/lumoddas_/" target="_blank" class="btn-primary">Seguir</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon"><i class="fas fa-store"></i></div>
+          <h3>Retirada Presencial</h3>
+          <p>Eunápolis – BA<br>Seg–Sáb: 9h às 18h</p>
+          <a href="#produtos" class="btn-primary">Ver produtos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <p>"Deus é quem dá o crescimento"</p>
+      </div>
+      <div class="footer-col">
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Atendimento</h4>
+        <ul>
+          <li><a href="#contato">Fale Conosco</a></li>
+          <li><a href="#">Trocas e Devoluções</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><i class="fab fa-whatsapp"></i> (11) 91373-7261</li>
+          <li><i class="fab fa-instagram"></i> @lumoddas_</li>
+          <li><i class="fas fa-location-dot"></i> Eunápolis – BA</li>
+        </ul>
+        <a href="https://wa.me/5511913737261" target="_blank" class="btn-wpp-footer">
+          <i class="fab fa-whatsapp"></i> Fale pelo WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Lu Modas – Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- BOTTOM NAV -->
+  <nav class="bottom-nav">
+    <a href="#inicio" class="bottom-nav-item active"><i class="fas fa-house"></i><span>Início</span></a>
+    <a href="#produtos" class="bottom-nav-item"><i class="fas fa-shirt"></i><span>Produtos</span></a>
+    <a href="#contato" class="bottom-nav-item"><i class="fas fa-phone"></i><span>Contato</span></a>
+    <button class="bottom-nav-item cart-nav-btn" id="cartBtnMobile">
+      <i class="fas fa-bag-shopping"></i><span>Carrinho</span>
+      <span class="cart-count-mobile" id="cartCountMobile">0</span>
+    </button>
+  </nav>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h2><i class="fas fa-bag-shopping"></i> Meu Carrinho</h2>
+      <button class="cart-close" id="cartClose"><i class="fas fa-xmark"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty" id="cartEmpty">
+        <i class="fas fa-bag-shopping"></i>
+        <p>Seu carrinho está vazio</p>
+        <a href="#produtos" class="btn-primary" id="goProducts">Ver Produtos</a>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-total-row">
+        <span>Total</span>
+        <strong id="cartTotal">R$ 0,00</strong>
+      </div>
+      <button class="btn-checkout" id="checkoutBtn">Finalizar Pedido</button>
+    </div>
+  </aside>
+
+  <!-- MODAL CHECKOUT -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="modal-close" id="modalClose"><i class="fas fa-xmark"></i></button>
+      <h2>Finalizar Pedido</h2>
+      <p class="modal-sub">Informe seu nome para enviarmos o pedido pelo WhatsApp.</p>
+      <div class="form-group">
+        <label for="clientName">Seu nome completo *</label>
+        <input type="text" id="clientName" placeholder="Ex: Maria Silva"/>
+        <span class="field-error" id="nameError">Por favor, informe seu nome.</span>
+      </div>
+      <div class="order-summary" id="orderSummary"></div>
+      <div class="modal-total">
+        <span>Total do pedido</span>
+        <strong id="modalTotal">R$ 0,00</strong>
+      </div>
+      <div class="delivery-options">
+        <p class="delivery-label">Como deseja receber?</p>
+        <label class="delivery-opt">
+          <input type="radio" name="delivery" value="retirada" checked/>
+          <span><i class="fas fa-store"></i> Retirar na loja</span>
+        </label>
+        <label class="delivery-opt">
+          <input type="radio" name="delivery" value="entrega"/>
+          <span><i class="fas fa-location-dot"></i> Entrega (Eunápolis-BA)</span>
+        </label>
+      </div>
+
+      <div class="address-fields" id="addressFields">
+        <div class="address-notice">
+          <i class="fas fa-circle-info"></i>
+          Entrega disponível apenas dentro de Eunápolis-BA.
+        </div>
+        <div class="form-group">
+          <label for="addrRua">Rua / Avenida *</label>
+          <input type="text" id="addrRua" placeholder="Ex: Rua das Flores"/>
+          <span class="field-error" id="addrRuaError">Informe a rua.</span>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="addrNum">Número *</label>
+            <input type="text" id="addrNum" placeholder="Ex: 123"/>
+            <span class="field-error" id="addrNumError">Informe o número.</span>
+          </div>
+          <div class="form-group">
+            <label for="addrComp">Complemento</label>
+            <input type="text" id="addrComp" placeholder="Apto, casa..."/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="addrBairro">Bairro *</label>
+          <input type="text" id="addrBairro" placeholder="Ex: Centro"/>
+          <span class="field-error" id="addrBairroError">Informe o bairro.</span>
+        </div>
+        <div class="form-group addr-city-wrap">
+          <label>Cidade</label>
+          <input type="text" value="Eunápolis - BA" disabled class="input-disabled"/>
+        </div>
+      </div>
+
+      <button class="btn-send-wpp" id="sendWppBtn">
+        <i class="fab fa-whatsapp"></i> Enviar pedido pelo WhatsApp
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
