@@ -330,7 +330,7 @@ Total: ${fmt(total)}
 
 ${entregaTexto}`;
 
-  const phone = '5511913737261'; // ← troque pelo número real
+  const phone = '557381793388'; // ← troque pelo número real
   window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank');
 
   cart = [];
